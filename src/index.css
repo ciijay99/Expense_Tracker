@@ -1,8 +1,10 @@
-*, *::before, *::after{
-  margin:0;
-  padding:0;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   /* border:0; */
-  outline:0;
+  outline: 0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
@@ -46,8 +48,6 @@ label {
   --transition-fast: all 180ms ease;
   --transition-slow: all 500ms ease;
 
-
-
   --container-width-lg: 80%;
   --container-width-md: 90%;
   --container-width-sm: 94%;
@@ -57,14 +57,13 @@ body {
   min-height: 100vh;
   display: grid;
   justify-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: var(--color-bg);
   color: var(--color-gray-100);
   overflow-x: hidden;
   line-height: 1.7;
 }
-
 
 .container {
   /* margin: 4vmax max(calc((100vw - 70rem) / 2), 1.5rem) 6em; */
@@ -77,28 +76,32 @@ body {
   width: var(--container-width-lg);
 }
 
-h1, h2, h3, h4, h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
   line-height: 1.2;
   color: var(--color-gray-200);
 }
 
-h1{
+h1 {
   font-size: 2.5rem;
 }
 
-h2{
+h2 {
   font-size: 2rem;
 }
 
-h3{
+h3 {
   font-size: 1.6rem;
 }
 
-h4{
+h4 {
   font-size: 1.3rem;
 }
 
-.btn{
+.btn {
   display: inline-block;
   background: var(--color-primary);
   color: var(--color-gray-500);
@@ -108,45 +111,45 @@ h4{
   transition: var(--transition_slow);
   width: max-content;
   margin: 0 auto;
-  padding: 0.3rem 1.0rem;
+  padding: 0.3rem 1rem;
   font-size: 1.2rem;
 }
 
-.btn:hover{
+.btn:hover {
   background: transparent;
   color: var(--color-white);
   border-color: var(--color-white);
 }
 
-.btn.add{
+.btn.add {
+  font-weight: 900;
+  /* margin-top: 2.75rem; */
+  /* height: max-content; */
+}
+
+.btn.check {
   font-weight: 900;
   margin-top: 2.75rem;
   height: max-content;
 }
 
-.btn.check{
-  font-weight: 900;
-  margin-top: 2.75rem;
-  height: max-content;
-}
-
-.btn.delete{
+.btn.delete {
   background: var(--color-danger);
 }
 
-.btn.delete:hover{
+.btn.delete:hover {
   background: transparent;
   color: var(--color-danger);
   border-color: var(--color-danger);
 }
 
-form{
+form {
   display: flex;
   gap: 0.5em;
   text-align: left;
 }
 
-.form{
+.form {
   display: grid;
   grid-template-columns: 100% 1fr;
   gap: 2rem;
@@ -173,21 +176,22 @@ input.submit {
   cursor: pointer;
 }
 
-input::placeholder{
-opacity: 0;
+input::placeholder {
+  opacity: 0;
 }
 
 .expense__container {
   display: grid;
-  grid-template-columns: 65% 1fr;
+  grid-template-columns: 70% 1fr;
   gap: 2rem;
   margin: 1rem;
   border: 1px solid var(--color-primary-variant);
   border-radius: 0.5rem;
   padding: 1rem;
+  width: 40rem;
 }
 
-.expense__item{
+.expense__item {
   text-transform: capitalize;
   margin-top: 0.3rem;
   margin-left: 1rem;
@@ -196,16 +200,16 @@ opacity: 0;
   text-align: left;
 }
 
-.expense__btn{
+.expense__btn {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
-p{
+p {
   color: var(--color-secondary);
 }
 
-.total{
+.total {
   border: 1px solid var(--color-primary-variant);
   border-radius: 0.5rem;
   padding: 0;
@@ -214,14 +218,14 @@ p{
   text-align: center;
 }
 
-@media screen and (max-width:1024px) {
-  .container{
+@media screen and (max-width: 1024px) {
+  .container {
     width: var(--container-width-md);
   }
 }
 
-@media screen and (max-width:600px) {
-  .container{
+@media screen and (max-width: 600px) {
+  .container {
     width: var(--container-width-sm);
     padding-left: 1.3rem;
   }
@@ -232,7 +236,7 @@ p{
     gap: 0;
   }
 
-  input{
+  input {
     padding: 0.7rem;
   }
 
@@ -244,26 +248,26 @@ p{
     padding: 1rem;
   }
 
-  .expense__item{
+  .expense__item {
     text-transform: capitalize;
     margin-top: 0.1rem;
     margin-left: -0.3rem;
-    font-size: 1.0rem;
+    font-size: 1rem;
     font-weight: 500;
     text-align: left;
   }
 
-  .btn.delete{
+  .btn.delete {
     padding: 0.1rem 0.7rem;
     font-size: 0.9rem;
   }
-  .btn.edit{
+  .btn.edit {
     padding: 0.1rem 0.7rem;
     font-size: 0.9rem;
   }
 
-  .expense__btn{
+  .expense__btn {
     display: flex;
     gap: 1rem;
-  }  
+  }
 }
