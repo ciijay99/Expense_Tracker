@@ -5,8 +5,6 @@ import useLocalStorage from './hook/useLocalStorage';
 
 const App = () => {
   const [expenses, setExpenses] = useLocalStorage('key', []);
-  // const [expense, setExpense] = useState("");
-  // const [amount, setAmount] = useState(0);
   const [editedExpense, setEditedExpense] = useState(null);
   const [editing, setEditing] = useState(false);
 
@@ -28,13 +26,6 @@ const App = () => {
     );
     closeEditMode();
   };
-
-  /* const editExpense = (expense, amount) => {
-    const updatedExpenses = [...expenses];
-    updatedExpenses[editingIndex] = { id: expenses[editingIndex].id, expense, amount };
-    setExpenses(updatedExpenses);
-    setEditingIndex(null);
-  }; */
 
   const closeEditMode = () => {
     setEditing(false);
